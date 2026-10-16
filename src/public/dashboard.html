@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>控制台 · GoShip 出海快启</title>
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body data-page="dashboard">
+
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="logo" width="28" height="28">GoShip<span class="brand-zh">出海快启</span></a>
+    <nav class="nav-links">
+      <a class="nav-link" href="/">首页</a>
+      <a class="nav-link" href="/pricing">定价</a>
+      <span data-auth="name" class="nav-link" style="font-weight:600"></span>
+      <button class="btn btn-sm btn-outline" id="logout-btn">退出</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container page-body">
+  <div class="dash-head">
+    <div>
+      <h1>控制台</h1>
+      <p class="muted" id="sub-status">加载中…</p>
+    </div>
+    <a class="btn btn-primary" href="/pricing">升级 Pro</a>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="card">
+        <h3 style="margin-bottom:16px">我的项目 <span class="muted small">（示例业务模块：CRUD）</span></h3>
+        <form id="project-form" style="display:grid;grid-template-columns:1fr 2fr auto;gap:10px;margin-bottom:16px">
+          <input type="text" id="project-name" placeholder="项目名称" required maxlength="80" style="padding:10px 14px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--ink);font-family:var(--font)">
+          <input type="text" id="project-desc" placeholder="一句话描述（可选）" maxlength="300" style="padding:10px 14px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--ink);font-family:var(--font)">
+          <button type="submit" class="btn btn-primary">+ 创建</button>
+        </form>
+        <table class="table">
+          <thead><tr><th>项目</th><th>状态</th><th>创建时间</th><th></th></tr></thead>
+          <tbody id="project-list"><tr><td colspan="4" class="muted">加载中…</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h3 style="margin-bottom:12px">账号信息</h3>
+        <p class="muted" style="font-size:14px">邮箱：<span data-auth="email"></span></p>
+        <p class="muted" style="font-size:14px;margin-bottom:16px">套餐：<span data-auth="plan"></span></p>
+        <form id="profile-form" style="margin-bottom:16px">
+          <div class="field">
+            <label for="profile-name">昵称</label>
+            <input type="text" id="profile-name" maxlength="60" placeholder="你的昵称">
+          </div>
+          <div class="field">
+            <label for="profile-password">新密码（留空则不修改，至少 8 位）</label>
+            <input type="password" id="profile-password" minlength="8" autocomplete="new-password" placeholder="••••••••">
+          </div>
+          <button type="submit" class="btn btn-outline btn-block">保存资料</button>
+        </form>
+        <a class="btn btn-outline btn-block" href="/docs">阅读文档</a>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <h3 style="margin-bottom:8px">下一步？</h3>
+        <ul style="list-style:none;font-size:14px;color:var(--ink-2)">
+          <li style="padding:4px 0">1️⃣ 改掉 <code>src/public/index.html</code> 文案</li>
+          <li style="padding:4px 0">2️⃣ 配置支付（见文档「支付接入」）</li>
+          <li style="padding:4px 0">3️⃣ <code>bash deploy/deploy-aliyun.sh</code> 上线</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 GoShip 出海快启 · <a href="/docs">文档</a></p>
+    <p class="muted">控制台页也是源码示例，随便改</p>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<script src="/assets/app.js?v=5"></script>
+</body>
+</html>

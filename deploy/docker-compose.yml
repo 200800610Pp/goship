@@ -1,0 +1,19 @@
+services:
+  goship:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8787:8787"
+    volumes:
+      - goship-data:/app/data
+    environment:
+      SESSION_SECRET: "change-me-to-a-long-random-string"
+      SITE_URL: "https://yourdomain.com"
+      SUPPORT_EMAIL: "support@yourdomain.com"
+      # Waffo 公钥（Webhook 验签用）：可直接用环境变量，或挂载 data/waffo-public.pem 文件
+      # WAFFO_PUBLIC_KEY: "-----BEGIN PUBLIC KEY-----\nMIIB...\n-----END PUBLIC KEY-----"
+
+volumes:
+  goship-data:

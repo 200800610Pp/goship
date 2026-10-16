@@ -1,0 +1,5 @@
+{
+  "slug": "quickstart",
+  "title": "快速开始",
+  "body": "# 30 秒启动\n\n```bash\nnode src/server.js\n```\n\n没有 `npm install`，没有构建步骤。浏览器打开：\n\n- 着陆页 `http://localhost:8787`\n- 定价页 `http://localhost:8787/pricing`\n- 管理后台 `http://localhost:8787/admin`\n\n# 演示账号\n\n| 角色 | 邮箱 | 密码 |\n| --- | --- | --- |\n| 管理员 | admin@goship.dev | admin123456 |\n| 普通用户 | demo@goship.dev | demo123456 |\n\n> ⚠️ 上线前务必修改默认密码，并设置 `SESSION_SECRET` 环境变量。\n\n# 三个必改文件\n\n1. `src/config.js` —— 站点名称、支持邮箱、域名、模式（`demo` → `production`）\n2. `src/public/index.html` —— 你的产品文案与定价\n3. `content/posts/*.json` —— 换成你自己的文章\n\n# 常用命令\n\n| 命令 | 说明 |\n| --- | --- |\n| `node src/server.js` | 启动（生产） |\n| `node --watch src/server.js` | 开发模式（文件变更自动重启） |\n| 删除 `data/` 目录后重启 | 重置为全新种子数据 |\n\n# 目录速查\n\n```\nsrc/server.js        入口：HTTP 服务 + 全部路由\nsrc/config.js        配置中心\nsrc/lib/db.js        JSON 数据库（原子写入）\nsrc/lib/auth.js      scrypt 密码 + HMAC 会话\nsrc/lib/util.js      限流/渲染/工具\nsrc/public/          前端页面与资源\ncontent/posts/       博客文章（JSON + Markdown）\ncontent/docs/        本套文档\n```"
+}

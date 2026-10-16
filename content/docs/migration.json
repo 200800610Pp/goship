@@ -1,0 +1,5 @@
+{
+  "slug": "migration",
+  "title": "数据迁移与扩展",
+  "body": "# 什么时候该离开 JSON 库\n\n诚实回答：\n\n- 单表记录 **> 10 万条**；\n- 需要**多实例部署**；\n- 需要事务/复杂查询（JOIN、聚合报表）；\n- 团队多人协作开发。\n\n出现任意一条，就该迁移了。**这是成长问题，不是缺陷。**\n\n# 迁移到 SQLite（推荐第一步）\n\n数据模型是扁平集合，天然映射 SQL 表。思路：\n\n1. 用 `better-sqlite3`（唯一新增依赖）替换 `db.js` 内部实现；\n2. 保持 `db.insert/find/findOne/update/remove` 方法签名不变；\n3. 业务代码**一行不用改**。\n\n# 迁移到 PostgreSQL\n\n同上，把 `db.js` 换成 pg 驱动实现。集合 → 表、`find(predicate)` → SQL WHERE。迁移脚本：\n\n```bash\n# 导出 JSON → SQL 的一次性脚本（docs-zh/migrate-export.js）\nnode docs-zh/migrate-export.js > dump.sql\n```\n\n# 多实例部署\n\n- 数据库换成 PostgreSQL（托管或自建）；\n- 限流改为 nginx `limit_req` 或网关层；\n- 会话表已在数据库中，天然可共享 —— 无需 Redis。\n\n# 路线图建议\n\n1. 第一单收入：JSON 库 + 单服务器 ✅（现在）\n2. 月入 ¥1 万：迁移 SQLite + 每日备份\n3. 月入 ¥5 万+：PostgreSQL + 多实例\n\n**架构跟着钱走，而不是跟着焦虑走。**"
+}

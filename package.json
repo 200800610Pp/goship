@@ -1,0 +1,17 @@
+{
+  "name": "goship",
+  "version": "1.0.0",
+  "description": "零依赖出海 SaaS 快速启动套件（为中国独立开发者打造）",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node scripts/seed.js"
+  },
+  "keywords": ["saas", "starter", "boilerplate", "zero-dependency", "indie", "china", "shipfast"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {}
+}

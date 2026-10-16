@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>免费注册 · GoShip 出海快启</title>
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body data-page="auth">
+
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="logo" width="28" height="28">GoShip<span class="brand-zh">出海快启</span></a>
+    <nav class="nav-links"><a class="btn btn-sm btn-outline" href="/login">登录</a></nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="form-card">
+    <h1>免费开始 🚀</h1>
+    <p class="sub">注册即获得免费版全部源码与使用权限</p>
+    <div class="form-error" id="form-error"></div>
+    <form id="register-form">
+      <div class="field">
+        <label for="name">昵称</label>
+        <input type="text" id="name" required maxlength="60" placeholder="怎么称呼你">
+      </div>
+      <div class="field">
+        <label for="email">邮箱</label>
+        <input type="email" id="email" required autocomplete="email" placeholder="you@example.com">
+      </div>
+      <div class="field">
+        <label for="password">密码（至少 8 位）</label>
+        <input type="password" id="password" required minlength="8" autocomplete="new-password" placeholder="••••••••">
+      </div>
+      <div class="field">
+        <label for="password2">确认密码</label>
+        <input type="password" id="password2" required minlength="8" autocomplete="new-password" placeholder="••••••••">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">创建账号</button>
+    </form>
+    <p class="form-foot">已有账号？<a href="/login">直接登录</a></p>
+  </div>
+</main>
+
+<div id="toast"></div>
+<script src="/assets/app.js?v=5"></script>
+</body>
+</html>

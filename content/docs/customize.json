@@ -1,0 +1,5 @@
+{
+  "slug": "customize",
+  "title": "定制指南",
+  "body": "# 改文案（5 分钟）\n\n打开 `src/public/index.html`，搜索替换你的产品名与卖点。文案是销售页的灵魂，别偷懒。\n\n# 改样式（10 分钟）\n\n所有颜色/圆角/阴影集中在 `src/public/assets/styles.css` 顶部的 CSS 变量里：\n\n```css\n:root {\n  --brand: #1d4ed8;   /* 主色 */\n  --accent: #f59e0b;  /* 强调色 */\n  --radius: 12px;\n}\n```\n\n暗色模式已通过 `prefers-color-scheme` 自动适配。\n\n# 加一个页面\n\n1. 复制 `src/public/pricing.html` 为 `mypage.html`；\n2. 无需注册路由 —— 静态文件自动服务；\n3. 需要服务端渲染/数据的话，在 `src/server.js` 的 router 里加一个分支。\n\n# 加一个 API\n\n在 `src/server.js` 的 `handleApi` 里追加：\n\n```js\nif (url.pathname === '/api/my-feature' && req.method === 'GET') {\n  if (!user) return util.sendJson(res, 401, { error: '未登录' });\n  return util.sendJson(res, 200, { data: 'hello' });\n}\n```\n\n完整示例：内置的 `/api/projects` CRUD（路由 → 校验 → 落库 → 前端渲染）。\n\n# 加一个数据表\n\n```js\n// db.js 的 empty() 里加\nmyTable: [],\n\n// 业务代码里\nconst doc = { id: util.uuid(), createdAt: new Date().toISOString() };\ndb.insert('myTable', doc);\n```\n\n# 双语着陆页\n\n1. 复制 `index.html` → `index-en.html`，翻译文案；\n2. 服务器端按 `Accept-Language` 分流（示例代码见 `docs-zh/双语切换.md`）；\n3. 或直接在页面内做 i18n 字典切换。"
+}

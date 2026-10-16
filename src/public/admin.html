@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>管理后台 · GoShip 出海快启</title>
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body data-page="admin">
+
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="logo" width="28" height="28">GoShip<span class="brand-zh">出海快启</span></a>
+    <nav class="nav-links">
+      <span class="badge badge-admin">管理员</span>
+      <span data-auth="name" class="nav-link" style="font-weight:600"></span>
+      <button class="btn btn-sm btn-outline" id="logout-btn">退出</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container page-body">
+  <div class="dash-head">
+    <h1>管理后台</h1>
+  </div>
+
+  <div class="dash-grid" id="admin-stats"><div class="muted">加载中…</div></div>
+
+  <div class="two-col">
+    <div class="card">
+      <h3 style="margin-bottom:16px">用户管理</h3>
+      <div style="overflow-x:auto">
+        <table class="table">
+          <thead><tr><th>用户</th><th>角色</th><th>套餐</th><th>注册时间</th><th>操作</th></tr></thead>
+          <tbody id="admin-users"><tr><td colspan="5" class="muted">加载中…</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">热门页面 TOP10</h3>
+      <table class="table">
+        <thead><tr><th>路径</th><th>浏览</th></tr></thead>
+        <tbody id="top-pages"><tr><td colspan="2" class="muted">暂无数据</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 GoShip 出海快启</p>
+    <p class="muted">后台统计由内置埋点驱动，无第三方依赖</p>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<script src="/assets/app.js?v=5"></script>
+</body>
+</html>

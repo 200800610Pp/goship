@@ -1,0 +1,5 @@
+{
+  "slug": "security",
+  "title": "安全说明",
+  "body": "# 内置的安全基线\n\n| 能力 | 实现 | 位置 |\n| --- | --- | --- |\n| 密码哈希 | scrypt（N=16384, r=8, p=1） | `src/lib/auth.js` |\n| 会话防篡改 | HMAC-SHA256 签名 cookie | `src/lib/auth.js` |\n| 会话防回放 | 服务端只存 token 哈希 | `src/server.js` |\n| CSRF | 双提交 cookie + 请求头校验 | `src/server.js` |\n| 速率限制 | 每 IP 令牌桶（登录接口更严格） | `src/lib/util.js` |\n| 防时序枚举 | 登录失败也执行一次哈希 | `src/server.js` |\n| XSS | 所有动态输出经过 HTML 转义 | `src/lib/util.js` |\n| 路径穿越 | 静态文件路径归一化校验 | `src/server.js` |\n| 安全响应头 | CSP / nosniff / frame-deny | `src/server.js` |\n| 请求体限制 | 1MB 上限，超限断开 | `src/config.js` |\n\n# 你上线前还需要做的\n\n1. **HTTPS 全站**：用 Caddy 自动证书，一分钟搞定；\n2. **强密钥**：`SESSION_SECRET` 用 64 位随机串（`openssl rand -hex 32`）；\n3. **备份**：`data/db.json` 每天备份到异地（脚本示例见 `deploy/backup.sh`）；\n4. **关闭注册**：灰度/内测期可在管理后台一键关闭注册；\n5. **邀请码**：设置 `INVITE_CODE` 环境变量，注册需填写邀请码。\n\n# 已知边界（诚实清单）\n\n- 进程内限流：单机有效，多实例部署需外部方案（如 nginx limit_req）；\n- JSON 库：单机写入，不支持多实例共享；\n- 无邮箱验证/找回密码流程：接入邮件服务前，请勿承载高价值账号体系。\n\n把边界写清楚，是为了让你知道「什么场景不要硬上」。对 99% 的独立开发者在单服务器上的第一个产品，这套基线已经够用。"
+}

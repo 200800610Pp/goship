@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 300" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <defs>
+    <marker id="pArr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/>
+    </marker>
+  </defs>
+
+  <text x="490" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#0f172a">钱是怎么自动到账的：支付全流程（已实测）</text>
+
+  <!-- 六个环节 -->
+  <g font-size="14">
+    <rect x="15" y="80" width="150" height="96" rx="12" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="90" y="112" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e40af">1. 用户点击购买</text>
+    <text x="90" y="134" text-anchor="middle" fill="#334155">你网站上的</text>
+    <text x="90" y="152" text-anchor="middle" fill="#334155">「购买专业版」按钮</text>
+
+    <rect x="185" y="80" width="150" height="96" rx="12" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="260" y="112" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e40af">2. Waffo 收银台</text>
+    <text x="260" y="134" text-anchor="middle" fill="#334155">海外支付页面</text>
+    <text x="260" y="152" text-anchor="middle" fill="#334155">信用卡付款</text>
+
+    <rect x="355" y="80" width="150" height="96" rx="12" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="430" y="112" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e40af">3. 支付成功</text>
+    <text x="430" y="134" text-anchor="middle" fill="#334155">平台自动代缴</text>
+    <text x="430" y="152" text-anchor="middle" fill="#334155">各国销售税</text>
+
+    <rect x="525" y="80" width="150" height="96" rx="12" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="600" y="112" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e40af">4. Webhook 通知</text>
+    <text x="600" y="134" text-anchor="middle" fill="#334155">平台自动发消息</text>
+    <text x="600" y="152" text-anchor="middle" fill="#334155">给你的服务器</text>
+
+    <rect x="695" y="80" width="150" height="96" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="770" y="112" text-anchor="middle" font-size="15" font-weight="bold" fill="#92400e">5. 自动开通</text>
+    <text x="770" y="134" text-anchor="middle" fill="#78350f">服务器验签后</text>
+    <text x="770" y="152" text-anchor="middle" fill="#78350f">用户套餐自动升级</text>
+
+    <rect x="865" y="80" width="100" height="96" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="915" y="112" text-anchor="middle" font-size="15" font-weight="bold" fill="#166534">6. 你提现</text>
+    <text x="915" y="134" text-anchor="middle" fill="#166534">支付宝/银行卡</text>
+    <text x="915" y="152" text-anchor="middle" fill="#166534">（人民币结算）</text>
+  </g>
+
+  <!-- 箭头 -->
+  <g stroke="#1d4ed8" stroke-width="2" fill="none">
+    <path d="M165 128 L185 128" marker-end="url(#pArr)"/>
+    <path d="M335 128 L355 128" marker-end="url(#pArr)"/>
+    <path d="M505 128 L525 128" marker-end="url(#pArr)"/>
+    <path d="M675 128 L695 128" marker-end="url(#pArr)"/>
+    <path d="M845 128 L865 128" marker-end="url(#pArr)"/>
+  </g>
+
+  <text x="490" y="222" text-anchor="middle" font-size="15" fill="#334155">第 4–5 步完全自动，不需要你写一行代码 —— 接口已内置并通过实测</text>
+  <text x="490" y="246" text-anchor="middle" font-size="13" fill="#64748b">你只需要做一次：在收款平台复制「Waffo 公钥」→ 保存为服务器上的 waffo-public.pem（教程第 8 步）</text>
+</svg>

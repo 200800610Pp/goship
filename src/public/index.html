@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 域名所有权验证（Waffo Pancake 收款平台） -->
+<meta name="waffo-verify" content="8540219739df8cfafe2d0994b1751a21">
+<title>GoShip 出海快启 · 零依赖出海 SaaS 启动套件</title>
+<meta name="description" content="为中国独立开发者打造的零依赖 SaaS 启动套件：无构建步骤、无框架锁定、内置支付接入与中文文档。一条命令，出海开卖。">
+<meta property="og:title" content="GoShip 出海快启 · 零依赖出海 SaaS 启动套件">
+<meta property="og:description" content="零依赖、一条命令部署、内置 Waffo Pancake 支付接入。为中国独立开发者打造的 ShipFast 中文平替。">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body data-page="home">
+
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="GoShip logo" width="28" height="28">GoShip<span class="brand-zh">出海快启</span></a>
+    <nav class="nav-links">
+      <a class="nav-link active" href="/">首页</a>
+      <a class="nav-link" href="/pricing">定价</a>
+      <a class="nav-link" href="/blog">博客</a>
+      <a class="nav-link" href="/docs">文档</a>
+      <a class="nav-link" href="/login">登录</a>
+      <a class="btn btn-sm btn-primary" href="/register">免费开始</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= Hero ================= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge"><span class="dot"></span> 内置着陆页 / 认证 / 支付 / 后台 · 现在看的就是它自己</div>
+    <h1>从想法到海外收款，<br>只需要一个下午</h1>
+    <p class="lead">GoShip 是为中国独立开发者打造的零依赖 SaaS 启动套件：<strong>没有 npm install、没有构建步骤、没有框架锁定</strong>。一条命令跑在 50 元/月的轻量服务器上，内置支付接入、中英双语着陆页与中文文档 —— 出海开卖，不再卡在「起步」。</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="/register">免费开始使用 →</a>
+      <a class="btn btn-outline btn-lg" href="/pricing">查看定价</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 数据横幅：为什么现在 ================= -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="num">$15.7B→$59.6B</div>
+        <div class="lbl">微 SaaS 市场规模（2024→2030，约 30% 年增长）</div>
+        <div class="src">Superframeworks 2026</div>
+      </div>
+      <div class="stat">
+        <div class="num">≈$80K/月</div>
+        <div class="lbl">同类启动套件 ShipFast 的月收入</div>
+        <div class="src">Starter Story 2024</div>
+      </div>
+      <div class="stat">
+        <div class="num">95%</div>
+        <div class="lbl">微 SaaS 在 12 个月内实现盈利</div>
+        <div class="src">RockingWeb 2025</div>
+      </div>
+      <div class="stat">
+        <div class="num">¥2.75万亿</div>
+        <div class="lbl">中国跨境电商进出口额，出海工具需求爆发</div>
+        <div class="src">海关总署 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 一条命令 ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Start in 60 seconds</span>
+      <h2>下载、启动、开卖</h2>
+      <p class="muted">没有脚手架安装、没有依赖地狱。服务器、认证、支付、后台、博客 —— 全部内置。</p>
+    </div>
+    <div class="code-window">
+      <div class="titlebar"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span></div>
+      <pre><code><span class="c4"># 1. 启动（零 npm install）</span>
+<span class="c1">node</span> src/server.js
+
+<span class="c4"># 2. 打开浏览器 — 你看到的一切已经就绪</span>
+<span class="c2">http://localhost:8787</span>      <span class="c4">← 着陆页（双语）</span>
+<span class="c2">http://localhost:8787/admin</span>  <span class="c4">← 管理后台</span>
+
+<span class="c4"># 3. 部署到任意轻量服务器</span>
+<span class="c1">bash</span> deploy/deploy-aliyun.sh  <span class="c4">← 阿里云/腾讯云/任意 VPS</span>
+
+<span class="c3">⚡ 已包含：邮箱注册登录 · 会话 · CSRF · 限流 · 支付 Webhook · 埋点 · 博客 · 文档</span></code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 功能 ================= -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Everything included</span>
+      <h2>出海 SaaS 的每一个零件，都替你焊好了</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">🚀</div>
+        <h3>零依赖架构</h3>
+        <p>只用 Node.js 内置模块。没有供应链风险、没有依赖升级噩梦，生产环境零 <code>npm install</code>。单文件可读，想改哪改哪。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">💳</div>
+        <h3>支付接入层</h3>
+        <p>内置 Waffo Pancake 收款接入：RSA 验签的 Webhook + 订阅状态自动更新已写好，支持支付宝/银行卡以人民币提现。中国开发者常用的境外收款路径，开箱即用。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔐</div>
+        <h3>生产级安全基线</h3>
+        <p>scrypt 密码哈希、HMAC 签名会话、CSRF 防护、速率限制、CSP 安全头、路径穿越防护。不是玩具，是可上线的底子。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🌏</div>
+        <h3>中英双语着陆页</h3>
+        <p>同一个产品，中文讲给国内用户、英文卖给海外客户。着陆页即销售页 —— 你现在看的这个页面，就是套件自带的模板。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📊</div>
+        <h3>内置埋点与后台</h3>
+        <p>页面浏览、注册、登录自动打点；管理后台实时看用户数、MRR、热门页面。不发一分钱就拥有自己的数据。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📝</div>
+        <h3>博客 + 文档 + SEO</h3>
+        <p>Markdown 写文章、自动生成 sitemap.xml 与 robots.txt。独立开发者的增长靠内容 —— 管道已经铺好。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">☁️</div>
+        <h3>50 元/月的服务器就够</h3>
+        <p>Dockerfile、docker-compose、nginx 反代、阿里云部署脚本全部配好。轻量应用服务器起步，成本几乎为零。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🧭</div>
+        <h3>中文文档 + 出海手册</h3>
+        <p>从注册 Waffo Pancake 收款到 Product Hunt 发布的全流程中文手册。ShipFast 没告诉你的事，我们写成文档。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🧩</div>
+        <h3>示例业务模块</h3>
+        <p>内置「项目 CRUD」完整示例：路由 → 校验 → 数据库 → 前端渲染。照着抄，十分钟长出你自己的业务代码。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 对比 ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Why GoShip</span>
+      <h2>和「外国模板」比，差在哪</h2>
+    </div>
+    <div class="card" style="overflow-x:auto">
+      <table class="table">
+        <thead>
+          <tr><th></th><th>GoShip</th><th>ShipFast 类 Next.js 模板</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>中文文档</td><td>✅ 全中文 + 出海手册</td><td>❌ 英文，术语门槛高</td></tr>
+          <tr><td>部署成本</td><td>✅ 50 元/月轻量服务器</td><td>❌ Vercel 按量计费，国内访问慢</td></tr>
+          <tr><td>技术栈要求</td><td>✅ 会 Node 基础即可</td><td>❌ Next.js + Prisma + TypeScript 全家桶</td></tr>
+          <tr><td>构建/依赖</td><td>✅ 零构建、零 npm 依赖</td><td>❌ 数百依赖、持续升级压力</td></tr>
+          <tr><td>收款场景</td><td>✅ 面向中国开发者的境外收款路径（Waffo Pancake，可用支付宝提现）</td><td>❌ 竞品默认需自行配置海外收款，且无中文语境</td></tr>
+          <tr><td>价格</td><td>✅ $29 起，一次买断</td><td>❌ $169–$299</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 定价摘要 ================= -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Pricing</span>
+      <h2>一次买断，终身使用</h2>
+      <p class="muted">赚到第一笔钱之前，不背订阅包袱。</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="plan">
+        <h3>免费版</h3>
+        <div class="price">¥0</div>
+        <div class="period">永久免费</div>
+        <ul>
+          <li>着陆页 + 定价页</li>
+          <li>邮箱注册 / 登录</li>
+          <li>博客 + 文档系统</li>
+          <li>JSON 数据库</li>
+          <li>MIT 协议（保留版权）</li>
+        </ul>
+        <a class="btn btn-outline" href="/register">立即开始</a>
+      </div>
+      <div class="plan hot">
+        <span class="badge-hot">最受欢迎</span>
+        <h3>专业版</h3>
+        <div class="price">$29<small> 约 ¥207</small></div>
+        <div class="period">一次买断 · 12 个月更新</div>
+        <ul>
+          <li>免费版全部功能</li>
+          <li>管理后台</li>
+          <li>支付接入 + Webhook</li>
+          <li>埋点分析</li>
+          <li>商用授权（可移除版权）</li>
+        </ul>
+        <a class="btn btn-primary" href="/register" data-buy="pro">购买专业版</a>
+      </div>
+      <div class="plan">
+        <h3>团队版</h3>
+        <div class="price">$139<small> 约 ¥992</small></div>
+        <div class="period">一次买断 · 终身更新</div>
+        <ul>
+          <li>专业版全部功能</li>
+          <li>最多 5 人团队授权</li>
+          <li>优先支持（48h 响应）</li>
+          <li>终身更新</li>
+          <li>部署协助一次</li>
+        </ul>
+        <a class="btn btn-outline" href="/register" data-buy="team">购买团队版</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">FAQ</span>
+      <h2>常见问题</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>我只会一点编程，能用吗？</h3>
+        <p>能。你只需要看得懂 Node.js 基础语法。全部代码约 2000 行、纯内置模块、无任何魔法黑盒 —— 每个文件都有中文注释。</p>
+      </div>
+      <div class="faq-item">
+        <h3>零依赖真的靠谱吗？数据库都没有？</h3>
+        <p>对单机/轻量场景（单服务器、<10 万条记录）完全够用。JSON 库采用原子写入，断电不损坏数据；需要时可用文档中的迁移指南平滑升级到 SQLite/PostgreSQL。</p>
+      </div>
+      <div class="faq-item">
+        <h3>国内服务器能收海外用户的钱吗？</h3>
+        <p>套件内置 <b>Waffo Pancake</b>（Merchant of Record，替你处理税务/发票，支持支付宝提现）的完整收款接入。你只需注册一个境外收款账号，不要求公司主体。</p>
+      </div>
+      <div class="faq-item">
+        <h3>买断后更新怎么算？</h3>
+        <p>专业版含 12 个月免费更新，之后可选 $14/年 继续获取更新与支持；团队版终身更新。买断即永久使用权，不续费也不锁功能。</p>
+      </div>
+      <div class="faq-item">
+        <h3>和 Next.js 模板比，会不会很快到天花板？</h3>
+        <p>如果你已经有 React/Next.js 团队，它不适合你。本套件面向「想出海但被前端全家桶劝退」的独立开发者 —— 先把产品卖出去，架构随时可以进化。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 GoShip 出海快启 · <a href="/docs">文档</a> · <a href="/blog">博客</a> · <a href="/pricing">定价</a> · <a href="/terms">服务条款</a> · <a href="/privacy">隐私政策</a> · <a href="mailto:167536085@qq.com">联系</a></p>
+    <p class="muted">数据来源：Superframeworks 2026 · Starter Story · RockingWeb 2025 · 中国海关总署</p>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<script src="/assets/app.js?v=5"></script>
+</body>
+</html>
